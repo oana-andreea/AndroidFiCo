@@ -1,0 +1,94 @@
+<resources>
+    <string name="app_name">Consultant</string>
+    <string name="title_item_detail">Item Detail</string>
+    <string name="title_activity_main">Salary Consultant</string>
+
+    <string name="title_section1">Salary</string>
+    <string name="title_section2">Freelancer</string>
+    <string name="title_section3">Comparison</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_example">Example action</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="share">Share.</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="salary_fragment">Salary fragment</string>
+    <string name="freelancer_fragment"> Freelancer fragment</string>
+    <string name="comparison_fragment">Comparison fragment</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="salary_net_description">Net Salary</string>
+    <string name="salary_gross_description">Gross Salary</string>
+    <string name="handicapted_description">Handicapped</string>
+    <string name="info">info</string>
+    <string name="infos">info</string>
+    <string name="salaryWelcome">Welcome please fill one of the salaries field for calculation</string>
+    <string name="lunchTicketText">New Text</string>
+    <string name="netSalaryDefinition">Net Salary represents a person\'s salary after taxes, insurance, etc. have been subtracted</string>
+    <string name="grossSalaryDefinition">Gross salary represents the money they earn before tax is deducted from it.</string>
+    <string name="handicappedDefinition">Persons with severe or profound disabilities, as well as programmers don\'t pay taxes in Romania</string>
+    <string name="baseFunctionDefinition">In case an employee has more active employments record, the deductible are applied only for the employment.</string>
+    <string name="dependantsDefinition">Please state the number of persons in care, dependants without other source of income</string>
+    <string name="calculate">Calculate</string>
+    <string name="RiskPercentDefinition">The insurance contribution for work accidents and occupational diseases is determined based on the risk tariff value is between  0.4 low risk and 1 high risk></string>
+    <string name="manual">Enter Manually</string>
+    <string name="average">Choose Average Value</string>
+    <string name="riskList">Go to the risk list</string>
+    <string name="lunchDefinition">Please enter the sum of the lunch tickets</string>
+    <string name="title_activity_detail">DetailActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="CASS_description">Health Care</string>
+    <string name="CAS_description">Pension</string>
+    <string name="unemploymentDescription">Unemployment</string>
+    <string name="detailsWelcome">Detailed Tax Calculation Result for Salary</string>
+    <string name="domicile">Domicile</string>
+    <string name="age">0</string>
+    <string name="codeDefinition">The code has four digits and identifies the type of performed work.</string>
+    <string name="domicileDefinition">The Norm depends on the domicile</string>
+    <string name="normDefinition">The norm established the taxes amount.</string>
+    <string name="genderAgeInfo">Reductions are applied differentially on age based on gender.</string>
+    <string name="incomeDefinition">Taxes are calculated based on the norm and not by the income.</string>
+    <string name="detailsWelcomeFreelancer">Detailed Tax Calculation Result for Freelancer</string>
+    <string name="yearlyIncome">Yearly Income</string>
+    <string name="tax">Tax</string>
+    <string name="pensionInfoDefinition">Pension represent 10.5 % from the gross salary</string>
+    <string name="pref_salary">Income</string>
+    <string name="pref_key_salary">salary</string>
+    <string name="pref_default_salary">0</string>
+    <string name="pref_age">Age</string>
+    <string name="pref_key_age">age</string>
+    <string name="pref_default_age">30</string>
+    <string name="pref_gender">Gender</string>
+    <string name="pref_key_gender">gender</string>
+    <string name="pref_gender_male">M</string>
+    <string name="pref_gender_female">F</string>
+    <string name="pref_gender_summary_female">Female</string>
+    <string name="pref_gender_summary_male">Male</string>
+    <string name="pref_title_location">Location</string>
+    <string name="pref_key_location">location</string>
+    <string name="pref_default_location">Cluj-Napoca</string>
+    <string name="incomeInfoDefinition">Please state an income prior to taxing for calculation</string>
+    <string name="taxInfoDefinition">Represents 16% of the norm, independent of the realized income.</string>
+    <string name="normInfoDefinition">This represents the base for all state imposed obligations.</string>
+    <string name="healthCareInfoDefinition">Represents 5.5% of the norm, independent of the realized income.</string>
+    <string name="reductionInfoDefinition">Reductions are applied based on employment, age and gender.</string>
+    <string name="incomeAfterTaxesInfoDefinition">This is the income remaining after all taxes are subtracted</string>
+    <string name="workConditionsDefinition">Taxes are influenced by the work\'s risk.</string>
+    <string name="employeeDefinition">Freelancer who also work as employee have tax discounts for freelancing.</string>
+    <string name="numberOfDependantsTextView">Number of Dependents</string>
+    <string name="lunchTicketTextView">Lunch Tickets Amount</string>
+    <string name="baseFunctionTextView">Base Function</string>
+    <string name="workConditionTextView">Work Conditions</string>
+    <string name="domicileTextView">Domicile</string>
+    <string name="deductibleInfoDefinition">Based on number of dependants part of taxes are deductible</string>
+    <string name="totalTaxes">Taxes total</string>
+    <string name="pensionNormDefinition">Represents 10.5% of the norm, only if the freelancer is not an employee</string>
+
+</resources>
+

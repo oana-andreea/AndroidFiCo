@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:layout_width = "match_parent"
+                  android:layout_height="match_parent">
+
+    <EditTextPreference
+        android:title="@string/pref_salary"
+        android:key="@string/pref_key_salary"
+        android:defaultValue="@string/pref_default_salary"
+        android:inputType="number"
+        android:singleLine="true"/>
+
+    <EditTextPreference
+        android:title="@string/pref_age"
+        android:key="@string/pref_key_age"
+        android:defaultValue="@string/pref_default_age"
+        android:inputType="number"
+        android:singleLine="true"/>
+
+    <SwitchPreference
+        android:title="@string/pref_gender"
+        android:key="@string/pref_key_gender"
+        android:showText="true"
+        android:switchTextOn="@string/pref_gender_male"
+        android:switchTextOff="@string/pref_gender_female"
+        android:summaryOff="@string/pref_gender_summary_female"
+        android:summaryOn="@string/pref_gender_summary_male"
+        />
+
+    <EditTextPreference
+        android:key="@string/pref_key_location"
+        android:title="@string/pref_title_location"
+        android:defaultValue="@string/pref_default_location"
+        android:inputType="text"
+        android:singleLine="true"/>
+</PreferenceScreen>

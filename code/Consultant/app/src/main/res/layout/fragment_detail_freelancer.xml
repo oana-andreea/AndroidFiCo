@@ -1,0 +1,271 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="ro.moa.financial.consultant.DetailFreelancerFragment">
+    <FrameLayout android:layout_width="match_parent"
+                 android:layout_height="match_parent">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        tools:context="ro.moa.financial.consultant.SalaryFragment"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout2"
+        android:nestedScrollingEnabled="true">
+
+        <TextView
+            style="@style/Base.TextAppearance.AppCompat.Body2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/detailsWelcomeFreelancer"
+            android:id="@+id/textView13"
+            android:autoText="false"
+            android:layout_weight="0"
+            android:gravity="center_vertical"
+            android:background="#ffff4961"
+            android:elegantTextHeight="true"
+            android:linksClickable="false"
+            android:minLines="3"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:focusable="true"/>
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:text="@string/yearlyIncome"
+                    android:layout_weight="2"
+                    android:focusable="true"/>
+
+                <EditText
+                    android:id="@+id/incomeAmount2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:minWidth="60dp"
+                    android:layout_weight="2"
+                    android:text="0"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageViewIncome"
+                    android:onClick="onGrossSalaryInfoClick"
+                    android:src="@android:drawable/ic_menu_info_details"
+                    android:layout_gravity="right"
+                    android:layout_weight="0"
+                    android:contentDescription="@string/info"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:id="@+id/textView18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Norm"
+                    android:layout_weight="2"/>
+
+                <EditText
+                    android:id="@+id/normAmount2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:layout_weight="2"
+                    android:minWidth="60dp"
+                    android:text="0"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageViewNorm"
+                    android:onClick="onNetSalaryInfoClick"
+                    android:src="@android:drawable/ic_menu_info_details"
+                    android:contentDescription="@string/info"
+                    android:layout_gravity="right"
+                    android:layout_weight="0"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:text="@string/tax"
+                    android:layout_weight="2"/>
+
+                <EditText
+                    android:id="@+id/taxAmount2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:minWidth="60dp"
+                    android:layout_weight="2"
+                    android:text="0"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageViewTax"
+                    android:onClick="onUnemploymentInfoClick"
+                    android:src="@android:drawable/ic_menu_info_details"
+                    android:layout_gravity="right"
+                    android:layout_weight="0"
+                    android:contentDescription="@string/info"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:text="@string/CAS_description"
+                    android:layout_weight="2"/>
+
+                <EditText
+                    android:id="@+id/pensionAmount2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:minWidth="60dp"
+                    android:layout_weight="2"
+                    android:text="0"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageViewPension"
+                    android:onClick="onCASSInfoClick"
+                    android:src="@android:drawable/ic_menu_info_details"
+                    android:layout_gravity="right"
+                    android:layout_weight="0"
+                    android:contentDescription="@string/info"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:text="@string/CASS_description"
+                    android:layout_weight="2"/>
+
+                <EditText
+                    android:id="@+id/healthCareAmount2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:minWidth="60dp"
+                    android:layout_weight="2"
+                    android:text="0"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageViewHealthCare"
+                    android:onClick="onCASSInfoClick"
+                    android:src="@android:drawable/ic_menu_info_details"
+                    android:layout_gravity="right"
+                    android:layout_weight="0"
+                    android:contentDescription="@string/info"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reductions"
+                    android:id="@+id/textView20"
+                    android:singleLine="false"
+                    android:layout_weight="2"/>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/reductionAmount2"
+                    android:layout_weight="2"
+                    android:text="0"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageViewReduction"
+                    android:contentDescription="@string/info"
+                    android:src="@android:drawable/ic_menu_info_details"
+                    android:onClick="onDependantsInfoClick"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Income after taxes"
+                    android:id="@+id/textView19"
+                    android:password="false"
+                    android:layout_weight="2"/>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/incomeAfterTaxesAmount2"
+                    android:layout_weight="2"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageViewAfterTaxes"
+                    android:onClick="onHandicappedInfoClick"
+                    android:contentDescription="@string/info"
+                    android:src="@android:drawable/ic_menu_info_details"
+                    android:adjustViewBounds="false"
+                    android:layout_gravity="right"
+                    android:layout_weight="0"/>
+            </TableRow>
+
+        </TableLayout>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Change"
+            android:id="@+id/button"
+            android:layout_gravity="center"
+            />
+    </LinearLayout>
+
+</FrameLayout>
+</ScrollView>

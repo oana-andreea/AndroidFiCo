@@ -1,0 +1,231 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="ro.moa.financial.consultant.FreelancerFragment">
+
+    <LinearLayout
+        android:id="@+id/freelancer"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        tools:context="ro.moa.financial.consultant.FreelancerFragment">
+
+        <TextView
+            android:id="@+id/Welcome"
+            style="@style/Base.TextAppearance.AppCompat.Body2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:autoText="false"
+            android:background="#ffff4961"
+            android:elegantTextHeight="true"
+            android:gravity="center_vertical"
+            android:linksClickable="false"
+            android:minLines="3"
+            android:text="Freelance Welcome!!"
+            android:textAlignment="center"
+            android:textStyle="bold"/>
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:id="@+id/textViewLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:singleLine="true"
+                    android:text="Domicile"/>
+
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"/>
+
+                <ImageView
+                    android:id="@+id/imageLocationFreelancer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_weight="0"
+                    android:contentDescription="@string/info"
+                    android:src="@android:drawable/ic_menu_info_details"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:id="@+id/textViewCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:password="false"
+                    android:text="Code"/>
+
+                <AutoCompleteTextView
+                    android:id="@+id/codeId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:dropDownHeight="100dp"
+                    android:hint="CAEN; eg: 6202"
+                    />
+
+                <ImageView
+                    android:id="@+id/imageCodeFreelancer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_weight="0"
+                    android:adjustViewBounds="false"
+                    android:contentDescription="@string/info"
+                    android:src="@android:drawable/ic_menu_info_details"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                >
+
+                <TextView
+                    android:id="@+id/textViewIncomeFreelancer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Yearly Income"/>
+
+                <EditText
+                    android:id="@+id/income"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:inputType="number"
+                    android:minWidth="60dp"
+                    android:text="0"/>
+
+                <ImageView
+                    android:id="@+id/imageIncomeFreelancer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_weight="0"
+                    android:contentDescription="@string/info"
+                    android:src="@android:drawable/ic_menu_info_details"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:id="@+id/textViewEmployee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:password="false"
+                    android:text="Employee"/>
+
+                <CheckBox
+                    android:id="@+id/employee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"/>
+
+                <ImageView
+                    android:id="@+id/imageEmployeeFreelancer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_weight="0"
+                    android:adjustViewBounds="false"
+                    android:contentDescription="@string/info"
+                    android:src="@android:drawable/ic_menu_info_details"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:id="@+id/textViewAge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:maxLength="3"
+                    android:text="Age"
+                    />
+
+                <EditText
+                    android:id="@+id/ageAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_weight="2"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text="@string/age"/>
+
+                <ImageView
+                    android:id="@+id/imageAgeFreelancer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/info"
+                    android:src="@android:drawable/ic_menu_info_details"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:id="@+id/textViewGender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Gender"/>
+
+                <Switch
+                    android:id="@+id/switchGender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:showText="true"
+                    android:textOff="@string/pref_gender_summary_female"
+                    android:textOn="@string/pref_gender_summary_male"/>
+
+                <ImageView
+                    android:id="@+id/imageGenderFreelancer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/info"
+                    android:src="@android:drawable/ic_menu_info_details"/>
+            </TableRow>
+
+        </TableLayout>
+
+        <Button
+            android:id="@+id/CalculateSalary"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:onClick="onCalculateSalaryClick"
+            android:text="Calculate"/>
+
+    </LinearLayout>
+</ScrollView>
