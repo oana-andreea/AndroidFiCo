@@ -2,18 +2,21 @@ package ro.moa.financial.consultant;
 
 import android.content.Intent;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.widget.ShareActionProvider;
 import android.view.Menu;
 import android.view.MenuItem;
 
-@SuppressWarnings("ALL")
+
 public class DetailActivity extends ActionBarActivity {
 
     public static final String FREELANCER ="freelancer";
     public static final String TYPE = "type";
     public static final String SALARY = "salary";
-
+    private ShareActionProvider mShareActionProvider;
+    private Intent shareIntent=new Intent(Intent.ACTION_SEND);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +25,8 @@ public class DetailActivity extends ActionBarActivity {
         final FragmentManager fragmentManager = getSupportFragmentManager();
         Bundle bundle = getIntent().getExtras();
         String type = bundle.getString(TYPE);
+        shareIntent.setType("text/plain");
+
         //String norm = bundle.getString(FREELANCER);
         if (type.equals(FREELANCER)) {
             DetailFreelancerFragment detailFreelancerFragment  = new DetailFreelancerFragment();
@@ -48,6 +53,11 @@ public class DetailActivity extends ActionBarActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_detail, menu);
+        MenuItem item= menu.findItem(R.id.menu_item_share2);
+        mShareActionProvider = (ShareActionProvider) MenuItemCompat.getActionProvider(item);
+        String text ="Share the knowledge! Take advantage of a financial consultant!";
+        shareIntent.putExtra(Intent.EXTRA_TEXT, text);
+        mShareActionProvider.setShareIntent(shareIntent);
         return true;
     }
 

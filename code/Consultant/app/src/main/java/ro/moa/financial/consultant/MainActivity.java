@@ -2,12 +2,14 @@ package ro.moa.financial.consultant;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.os.Bundle;
-import android.util.Log;
+
+import android.support.v7.widget.ShareActionProvider;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -17,17 +19,19 @@ import android.support.v4.widget.DrawerLayout;
 import android.widget.CheckBox;
 import android.widget.EditText;
 
+
 import java.util.ArrayList;
 
 import ro.moa.financial.consultant.service.LocationIntentService;
 
 public class MainActivity extends ActionBarActivity
-        implements NavigationDrawerFragment.NavigationDrawerCallbacks {
-
+        implements NavigationDrawerFragment.NavigationDrawerCallbacks{
     /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
      */
     private NavigationDrawerFragment mNavigationDrawerFragment;
+    private ShareActionProvider mShareActionProvider;
+    private Intent shareIntent=new Intent(Intent.ACTION_SEND);
 
     /**
      * Used to store the last screen title. For use in {@link #restoreActionBar()}.
@@ -49,6 +53,7 @@ public class MainActivity extends ActionBarActivity
         mNavigationDrawerFragment.setUp(
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
+        shareIntent.setType("text/plain");
 
         /* refresh locations if needed */
         startService(new Intent(this, LocationIntentService.class));
@@ -113,6 +118,11 @@ public class MainActivity extends ActionBarActivity
             // if the drawer is not showing. Otherwise, let the drawer
             // decide what to show in the action bar.
             getMenuInflater().inflate(R.menu.main, menu);
+            MenuItem item= menu.findItem(R.id.menu_item_share);
+            mShareActionProvider = (ShareActionProvider)MenuItemCompat.getActionProvider(item);
+            String text ="Share the knowledge! Take advantage of a financial consultant!";
+            shareIntent.putExtra(Intent.EXTRA_TEXT, text);
+            mShareActionProvider.setShareIntent(shareIntent);
             restoreActionBar();
             return true;
         }

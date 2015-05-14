@@ -89,6 +89,8 @@
     <string name="deductibleInfoDefinition">Based on number of dependants part of taxes are deductible</string>
     <string name="totalTaxes">Taxes total</string>
     <string name="pensionNormDefinition">Represents 10.5% of the norm, only if the freelancer is not an employee</string>
+    <string name="recalculateSalary">Recalculate</string>
+    <string name="changeSalary">Change Salary</string>
 
 </resources>
 

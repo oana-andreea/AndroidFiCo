@@ -144,11 +144,11 @@ public class DetailSalaryFragment extends Fragment {
             //netSalaryAmount.setSelected(true);
             netSalaryAmount.setFocusableInTouchMode(true);
 
-            change.setText("Recalculate");
-        } else if ((change.getText()).equals("Recalculate")) {
+            change.setText(getString(R.string.recalculateSalary));
+        } else if ((change.getText()).equals(getString(R.string.recalculateSalary))) {
             grossSalaryAmount.setFocusable(false);
             netSalaryAmount.setFocusable(false);
-            change.setText("Change Salary");
+            change.setText(getString(R.string.changeSalary));
 
             final int grossSalaryValue = Utils.getValueOrDefault(grossSalaryAmount, 0);
             if (grossSalaryValue != 0) {
